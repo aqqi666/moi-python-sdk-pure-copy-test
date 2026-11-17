@@ -65,11 +65,11 @@ class RunnerContractTest(unittest.TestCase):
             (sdk.with_token("user-token"), "Authorization", "Bearer user-token"),
         ):
             for status, code in (
-                (400, "INVALID_PARAMS"),
-                (404, "RUNNER_NOT_FOUND"),
-                (409, "RUNNER_NAME_CONFLICT"),
-                (409, "RUNNER_IAM_REQUEST_CONFLICT"),
-                (503, "RUNNER_IAM_UNAVAILABLE"),
+                (400, "ErrParamInvalid"),
+                (404, "ErrRunnerNotFound"),
+                (409, "ErrRunnerNameConflict"),
+                (409, "ErrRunnerIamRequestConflict"),
+                (503, "ErrRunnerIamUnavailable"),
             ):
                 with self.subTest(auth=header, code=code):
                     client = sdk.Client(

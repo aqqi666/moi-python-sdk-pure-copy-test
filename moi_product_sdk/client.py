@@ -4731,7 +4731,7 @@ class ComputePyDepsLimits:
     """Read-only projection of the py_deps.* runtime dynamic config (GET /compute-resources/py-deps-limits).
 
     Served as raw DTO JSON (no proto message). enabled=False (or the backend's
-    503 LIMITS_UNAVAILABLE surfaced as an Error) means the feature is off.
+    503 ErrLimitsUnavailable surfaced as an Error) means the feature is off.
     """
     enabled: bool = False
     max_bytes: int = 0

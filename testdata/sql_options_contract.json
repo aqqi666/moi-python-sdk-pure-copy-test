@@ -24,7 +24,7 @@
       "next_page_token": "eyJ2IjoxLCJraW5kIjoid29ya2Jvb2tzIiwid29ya3NwYWNlX2lkIjoid29ya3NwYWNlLTEiLCJzZWFyY2giOiLliIbmnpAiLCJjcmVhdGVkX2F0IjoiMjAyNi0xMS0wOVQwMTowMDowMFoiLCJpZCI6IndiLTEifQ"
     },
     "envelope": {
-      "code": 200,
+      "code": "OK",
       "data": {
         "total": 1,
         "result": [
@@ -50,7 +50,7 @@
       "next_page_token": ""
     },
     "envelope": {
-      "code": 200,
+      "code": "OK",
       "data": {
         "total": 0,
         "result": [],
@@ -85,7 +85,7 @@
       "next_page_token": ""
     },
     "envelope": {
-      "code": 200,
+      "code": "OK",
       "data": {
         "total": 1,
         "result": [
@@ -641,11 +641,11 @@
     },
     "response": null,
     "envelope": {
-      "code": 400,
-      "message": "workbook page is invalid"
+      "code": "ErrParamInvalid",
+      "msg": "workbook page is invalid"
     },
     "status": 400,
-    "error_code": "400"
+    "error_code": "ErrParamInvalid"
   },
   {
     "name": "history empty status reaches owner",

@@ -927,7 +927,7 @@ class _Handler(BaseHTTPRequestHandler):
                 self.send_response(400)
                 self.send_header("Content-Type", "application/json")
                 self.end_headers()
-                self.wfile.write(json.dumps({"code": "INVALID_ARGUMENT", "msg": "name is required"}).encode("utf-8"))
+                self.wfile.write(json.dumps({"code": "ErrParamInvalid", "msg": "name is required"}).encode("utf-8"))
                 return
             self._json({"code": "OK", "msg": "OK", "data": {"id": 7}})
             return
@@ -1172,7 +1172,7 @@ class _Handler(BaseHTTPRequestHandler):
             return
         if self.path == "/newmoi/user/create":
             if isinstance(body, dict) and body.get("name") == "unknown":
-                self._json({"code": "USER_NOT_FOUND", "msg": "Invitation account not found"}, status=404)
+                self._json({"code": "ErrUserNotFound", "msg": "Invitation account not found"}, status=404)
                 return
             self._json({"code": "OK", "msg": "OK", "data": {"id": "canonical-user-2"}})
             return
@@ -2229,7 +2229,7 @@ class WorkspaceFacadeTest(unittest.TestCase):
         self.assertEqual(missing_role.exception.code, "ErrDefaultRoleRequired")
         with self.assertRaises(sdk.Error) as unknown:
             workspace.invite_member("unknown", 10, sdk.with_user_github_login("new-user"), sdk.with_user_role_ids(10))
-        self.assertEqual(unknown.exception.code, "USER_NOT_FOUND")
+        self.assertEqual(unknown.exception.code, "ErrUserNotFound")
         self.assertEqual(unknown.exception.status, 404)
         self.assertEqual(unknown.exception.message, "Invitation account not found")
         self.assertEqual(

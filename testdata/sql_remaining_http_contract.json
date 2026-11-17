@@ -21,7 +21,7 @@
     },
     "response": null,
     "envelope": {
-      "code": 200,
+      "code": "OK",
       "data": null
     },
     "status": 200
@@ -63,7 +63,7 @@
       "next_page_token": ""
     },
     "envelope": {
-      "code": 200,
+      "code": "OK",
       "data": {
         "result": [
           {
@@ -125,7 +125,7 @@
       }
     },
     "envelope": {
-      "code": 200,
+      "code": "OK",
       "data": {
         "db_name": "sales",
         "tables": {
@@ -179,7 +179,7 @@
       ]
     },
     "envelope": {
-      "code": 200,
+      "code": "OK",
       "data": {
         "db_list": [
           {
@@ -239,7 +239,7 @@
       "total": 1
     },
     "envelope": {
-      "code": 200,
+      "code": "OK",
       "data": {
         "columns": [
           {
@@ -292,7 +292,7 @@
       "total": 1
     },
     "envelope": {
-      "code": 200,
+      "code": "OK",
       "data": {
         "columns": [
           {
@@ -335,7 +335,7 @@
       "create_sql": "CREATE TABLE `orders` (`id` INT)"
     },
     "envelope": {
-      "code": 200,
+      "code": "OK",
       "data": {
         "create_sql": "CREATE TABLE `orders` (`id` INT)"
       }
@@ -368,7 +368,7 @@
     },
     "response": null,
     "envelope": {
-      "code": 200,
+      "code": "OK",
       "data": null
     },
     "status": 200
@@ -409,7 +409,7 @@
       "rows": 3
     },
     "envelope": {
-      "code": 200,
+      "code": "OK",
       "data": {
         "columns": [
           {
@@ -450,7 +450,7 @@
     },
     "response": null,
     "envelope": {
-      "code": 200,
+      "code": "OK",
       "data": null
     },
     "status": 200
@@ -484,7 +484,7 @@
       "rows_affected": 0
     },
     "envelope": {
-      "code": 200,
+      "code": "OK",
       "data": {
         "query_id": "query-1",
         "created_at": "2026-11-10T01:02:03Z",
@@ -558,7 +558,7 @@
       ]
     },
     "envelope": {
-      "code": 200,
+      "code": "OK",
       "data": {
         "db_name": "sales",
         "table_name": "orders",
@@ -607,7 +607,7 @@
       ]
     },
     "envelope": {
-      "code": 200,
+      "code": "OK",
       "data": {
         "tables": [
           {
@@ -646,7 +646,7 @@
       "tables": []
     },
     "envelope": {
-      "code": 200,
+      "code": "OK",
       "data": {
         "tables": []
       }
@@ -678,7 +678,7 @@
       "name": "分析 表/1"
     },
     "envelope": {
-      "code": 200,
+      "code": "OK",
       "data": {
         "workbook_id": "wb-1",
         "name": "分析 表/1"
@@ -708,11 +708,11 @@
     },
     "response": null,
     "envelope": {
-      "code": 404,
-      "message": "workbook not found"
+      "code": "ErrNotFound",
+      "msg": "workbook not found"
     },
     "status": 404,
-    "error_code": "404"
+    "error_code": "ErrNotFound"
   },
   {
     "name": "workbook detail by version",
@@ -744,7 +744,7 @@
       "updated_at": "2026-11-10T02:03:04Z"
     },
     "envelope": {
-      "code": 200,
+      "code": "OK",
       "data": {
         "sql_content": "SELECT 1",
         "created_at": "2026-11-10T01:02:03Z",
@@ -779,7 +779,7 @@
     },
     "response": null,
     "envelope": {
-      "code": 200,
+      "code": "OK",
       "data": null
     },
     "status": 200
@@ -814,7 +814,7 @@
       "status": "draft"
     },
     "envelope": {
-      "code": 200,
+      "code": "OK",
       "data": {
         "id": "v-1",
         "version": "1",
@@ -853,7 +853,7 @@
     },
     "response": null,
     "envelope": {
-      "code": 200,
+      "code": "OK",
       "data": null
     },
     "status": 200
@@ -888,7 +888,7 @@
     },
     "response": null,
     "envelope": {
-      "code": 200,
+      "code": "OK",
       "data": null
     },
     "status": 200

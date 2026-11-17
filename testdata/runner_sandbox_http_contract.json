@@ -168,7 +168,7 @@
     "query": {},
     "status": 400,
     "response": {
-      "code": "INVALID_PARAMS",
+      "code": "ErrParamInvalid",
       "msg": "Synthetic runner name rejection"
     },
     "cli_args": [
@@ -970,7 +970,7 @@
     "query": {},
     "status": 403,
     "response": {
-      "code": "COMPUTE_RESOURCE_SPEC_FORBIDDEN",
+      "code": "ErrComputeResourceSpecForbidden",
       "msg": "Synthetic platform admission rejection"
     },
     "cli_args": [
